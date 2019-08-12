@@ -93,7 +93,7 @@ router.get("/verifytoken", VerifyToken, function(req, res, next) {
 });
 
 // catch 404
-app.use(function(req, res, next) {
+app.use(function(err, req, res, next) {
   console.log("404 req.body", req.body);
   // next(createError(404));
   res.status(404).send({
